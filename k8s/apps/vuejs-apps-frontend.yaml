@@ -17,9 +17,9 @@ spec:
           image: elghibaomar/vuejs-apps-frontend:latest
           env:
             - name: PORT
-              value: "8081"
+              value: "8082"
           ports:
-          - containerPort: 8081
+          - containerPort: 8082
 
 
 ---
@@ -33,7 +33,7 @@ spec:
     - name: http
       protocol: TCP
       port: 80
-      targetPort: 8081
+      targetPort: 8082
   selector:
     app: vuejs-apps-frontend-deployment
 
