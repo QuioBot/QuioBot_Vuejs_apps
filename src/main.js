@@ -18,15 +18,7 @@ axios.defaults.baseURL = 'http://127.0.0.1:8000/'
 // import "./searchbar/assets/css/ntfs.css";
 // import "./searchbar/assets/App.scss";
 
-const app = createApp(App);
+const app = createApp(App).use(router,axios).use(Toaster);
 
-app.use(router);
-
-app.use(axios);
-
-app.use(Toaster);
-
-app.use(AOS.init);
-
-app.mount("#app");
+app.use(AOS.init).mount("#app");
 
