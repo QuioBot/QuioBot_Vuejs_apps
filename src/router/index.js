@@ -11,6 +11,7 @@ import Platform from "../pages/Platform";
 
 
 const routes = [
+  { path: '/', component: Page404},
   { path: '/chatbot', component: ChatBot},
   { path: '/searchbar', component: SearchBar},
   { path: "/:catchAll(.*)", component: Page404},
@@ -21,9 +22,8 @@ const routes = [
 ];
 
 const router = createRouter({
-  mode: 'history',
   history: createWebHistory(),
-  linkExactActiveClass: "active",
+  // linkExactActiveClass: "active",
   routes,
   scrollBehavior() {
     return { top: 0 };
