@@ -1,16 +1,30 @@
 FROM node:lts-alpine
 
+# install simple http server for serving static content
+RUN npm install -g http-server
+
+# make the 'app' folder the current working directory
 WORKDIR /app
 
-ENV PATH /app/node_modules/.bin:$PATH
+# copy both 'package.json' and 'package-lock.json' (if available)
+COPY package*.json ./
 
-RUN npm install @vue/cli@4.5.13 -g
+RUN npm install npm@latest -g
 
-COPY package.json .
-# COPY package-lock.json .
+# install project dependencies
+
 RUN npm install
 
-CMD ["npm", "run", "serve"]
+# copy project files and folders to the current working directory (i.e. 'app' folder)
+COPY . .
+
+# build app for production with minification
+RUN npm run build
+
+RUN npm install webpack-cli@3.3.12 --force
+
+EXPOSE 8080
+CMD [ "http-server", "dist" ]
 
 
 
