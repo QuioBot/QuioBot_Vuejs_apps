@@ -2,7 +2,8 @@
 FROM node:14.7.0-alpine3.10 as build-stage
 WORKDIR /app
 COPY package.json ./
-CMD ["npm", "install"]
+# CMD ["npm", "install"]
+RUN npm run install
 COPY . .
 RUN npm run build
 
