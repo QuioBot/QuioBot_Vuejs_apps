@@ -13,10 +13,6 @@ import "./assets/App.scss";
 
 axios.defaults.baseURL = 'http://127.0.0.1:8000/'
 
-// import "./searchbar/assets/css/font-awesome.css";
-// import "./searchbar/assets/css/bootstrap.css";
-// import "./searchbar/assets/css/ntfs.css";
-// import "./searchbar/assets/App.scss";
 
 const app = createApp(App).use(router,axios).use(Toaster);
 

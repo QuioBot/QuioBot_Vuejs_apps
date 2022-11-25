@@ -22,7 +22,7 @@ const routes = [
   // { path: '/chatbot', component: ChatBot},
   { path: '/searchbar', component: SearchBar},
   { path: "/:catchAll(.*)", component: Page404},
-  { path: '/customer', component: Customer},
+  { path: '/customer', component: () => import("../pages/Customer")},
   { path: '/platform', component: Platform},
 
 
