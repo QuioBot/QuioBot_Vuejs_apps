@@ -1,7 +1,7 @@
 #build stage
 FROM node:14.7.0-alpine3.10 as build-stage
 WORKDIR /app
-COPY package*.json ./
+COPY package.json ./
 CMD ["npm", "install"]
 COPY . .
 RUN npm run build
