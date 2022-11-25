@@ -1,0 +1,58 @@
+name: Build Docker Container & Push to DO Registry
+
+on:
+  workflow_call:
+  workflow_dispatch:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      CLUSTER_NAME: project-k8s
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Insall doctl
+        uses: digitalocean/action-doctl@v2
+        with:
+          token: ${{ secrets.DO_API_TOKEN_KEY }}
+      - name: Login to DO Container Registry with short-lived creds
+        run: doctl registry login --expiry-seconds 1200
+      - name: docker login
+        env:
+          DOCKER_USER: ${{secrets.DOCKER_USER}}
+          DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
+        run: |
+          docker login -u $DOCKER_USER -p $DOCKER_PASSWORD 
+
+      
+
+      - name: Build container image
+        working-directory: .
+        run: |
+          docker build -f Dockerfile \
+            -t elghibaomar/vuejs-apps-frontend:latest \
+            -t elghibaomar/vuejs-apps-frontend:${GITHUB_SHA::7}-${GITHUB_RUN_ID::5} \
+            .
+          
+      
+      - name: Docker Push
+        run: docker push elghibaomar/vuejs-apps-frontend --all-tags
+      - name: K8s cluster kubeconfig file with/ short-lived creds
+        run: |
+          doctl kubernetes cluster kubeconfig save --expiry-seconds 600 ${{ env.CLUSTER_NAME }}
+
+      - name: Deployment image
+        run: |
+          kubectl apply -f k8s/apps/vuejs-apps-frontend.yaml 
+      - name: Update Deployment image
+        run: |
+          kubectl set image deployment/vuejs-apps-frontend-deployment vuejs-apps-frontend=elghibaomar/vuejs-apps-frontend:${GITHUB_SHA::7}-${GITHUB_RUN_ID::5}
+      - name: Wait for rollout to finish
+        run: |
+          kubectl rollout status deployment/vuejs-apps-frontend-deployment
+

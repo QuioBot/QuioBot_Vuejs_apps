@@ -1,0 +1,52 @@
+1  gcloud container clusters create api-cluster-v3 --num-nodes 2 --machine-type n1-standard-2
+    2  gcloud config set compute/zone us-central1-a
+    3  gcloud container clusters create api-cluster-v3 --num-nodes 2 --machine-type n1-standard-2
+    4  ls
+    5  git clone https://github.com/QuioBot/Customer-Satisfaction-Api
+    6  ls
+    7  export PROJECT_ID=ai-models-v1
+    8  docker build -t gcr.io/${PROJECT_ID}/fastapi-customer:v1 .
+    9  ls
+   10  cd Customer-Satisfaction-Api/
+   11  ls
+   12  docker build -t gcr.io/${PROJECT_ID}/fastapi-customer:v1 .
+   13  gcloud auth configure-docker
+   14  docker images
+   15  docker push gcr.io/ai-models-v1/fastapi-customer:v1
+   16  kubectl create deployment fastapi-customer --image=gcr.io/${PROJECT_ID}/fastapi-customer:v1
+   17  kubectl expose deployment fastapi-customer --type=LoadBalancer --port 80 --target-port 8000
+   18  kubectl get pods
+   19  docker iamages
+   20  docker images
+   21  docker push gcr.io/${PROJECT_ID}/fastapi-customer:v1
+   22  docker images
+   23  docker rmi gcr.io/ai-models-v1/fastapi-customer --force
+   24  docker images
+   25  docker rmi dfc85aab1c2f
+   26  docker images
+   27  clear
+   28  export PROJECT_ID=api-models
+   29  docker build -t gcr.io/${PROJECT_ID}/fastapi-customer:v1 .
+   30  docker images
+   31  gcloud auth configure-docker
+   32  docker push gcr.io/${PROJECT_ID}/fastapi-customer:v1
+   33  kubectl create deployment fastapi-customer --image=gcr.io/${PROJECT_ID}/fastapi-customer:v1
+   34  kubectl delete deployment fastapi-customer
+   35  kubectl create deployment fastapi-customer --image=gcr.io/${PROJECT_ID}/fastapi-customer:v1
+   36  kubectl expose deployment fastapi-customer --type=LoadBalancer --port 80 --target-port 8000
+   37  kubectl deployments
+   38  kubectl get deployments
+   39  kubectl get services
+   40  kubectl delete services fastapi-customer
+   41  kubectl expose deployment fastapi-customer --type=LoadBalancer --port 80 --target-port 8000
+   42  kubectl get pods
+   43  kubectl get services
+   44  kubectl get pods
+   45  clear
+   46  kubectl get pods
+   47  kubectl logs fastapi-customer-79cdb7f79c-nc8pf
+   48  kubectl get deployments
+   49  kubectl delete deployments fastapi-customer
+   50  kubectl delete services fastapi-customer
+   51  ls
+   52  history
