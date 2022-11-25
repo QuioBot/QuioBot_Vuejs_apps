@@ -1,10 +1,22 @@
 #build stage
-FROM node:14.7.0-alpine3.10 as build-stage
+FROM node:lts-alpine
+
+# install simple http server for serving static content
+
+# make the 'app' folder the current working directory
 WORKDIR /app
-COPY package.json ./
-# CMD ["npm", "install"]
-RUN npm run install
+
+# copy both 'package.json' and 'package-lock.json' (if available)
+COPY package*.json ./
+
+RUN npm install npm@latest -g
+
+# install project dependencies
+
+RUN npm install
+
 COPY . .
+
 RUN npm run build
 
 #production
