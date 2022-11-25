@@ -7,7 +7,6 @@
                         <img src='~@/assets/images/layout/404.png' alt="QuiBot" />
                         <h2 class="title">{{title}}</h2>
                         <p>{{desc}}</p>
-                        <a class="btn-action style-1" href="/"><span class="effect">Back To Homepage</span></a>
                     </div>
                 </div>
             </div>
