@@ -15,26 +15,29 @@
                             <nav id="main-nav" class="main-nav" v-bind:class="{active: isActive}">
                                 <ul id="menu-primary-menu" class="menu">
                                     <li class="menu-item">
-                                        <a class="page-scroll" href="#Home">Home</a>
+                                        <a class="page-scroll" href="#" v-scroll-to="'#Home'">Home</a>
+                                    </li>
+
+                                    <li class="menu-item">
+                                        <a class="page-scroll" href="#" v-scroll-to="'#RoadMap'">Road Map</a>
+                                    </li>
+
+                                    <li class="menu-item">
+                                        <a class="page-scroll" href="#" v-scroll-to="'#Training'">Training</a>
+                                    </li>
+
+                                    <li class="menu-item">
+                                        <a class="page-scroll" href="#" v-scroll-to="'#Technologies'">Technologies</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a class="page-scroll" href="#RoadMap">Road Map</a>
+                                        <a class="page-scroll" href="#" v-scroll-to="'#team'">Team</a>
+                                    </li>
+                                   
+                                    <li class="menu-item">
+                                        <a class="page-scroll" href="#" v-scroll-to="'#FAQ'">FAQ</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a class="page-scroll" href="#Training">Training</a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a class="page-scroll" href="#Technologies">Technologies</a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a class="page-scroll" href="#team">Team</a>
-                                    </li>
-                                    
-                                    <li class="menu-item">
-                                        <a class="page-scroll" href="#FAQ">FAQ</a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a class="page-scroll" href="#Contact">Contact</a>
+                                        <a class="page-scroll" href="#" v-scroll-to="'#Contact'">Contact</a>
                                     </li>
                                 </ul>
                             </nav>

@@ -17,29 +17,29 @@
                                     
                                     
                                     <li class="menu-item">
-                                        <a class="page-scroll" href="#Home">Home</a>
+                                        <a class="page-scroll" href="#" v-scroll-to="'#Home'">Home</a>
                                     </li>
 
                                     <li class="menu-item">
-                                        <a class="page-scroll" href="#RoadMap">Road Map</a>
+                                        <a class="page-scroll" href="#" v-scroll-to="'#RoadMap'">Road Map</a>
                                     </li>
 
                                     <li class="menu-item">
-                                        <a class="page-scroll" href="#Training">Training</a>
+                                        <a class="page-scroll" href="#" v-scroll-to="'#Training'">Training</a>
                                     </li>
 
                                     <li class="menu-item">
-                                        <a class="page-scroll" href="#Technologies">Technologies</a>
+                                        <a class="page-scroll" href="#" v-scroll-to="'#Technologies'">Technologies</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a class="page-scroll" href="#team">Team</a>
+                                        <a class="page-scroll" href="#" v-scroll-to="'#team'">Team</a>
                                     </li>
                                    
                                     <li class="menu-item">
-                                        <a class="page-scroll" href="#FAQ">FAQ</a>
+                                        <a class="page-scroll" href="#" v-scroll-to="'#FAQ'">FAQ</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a class="page-scroll" href="#Contact">Contact</a>
+                                        <a class="page-scroll" href="#" v-scroll-to="'#Contact'">Contact</a>
                                     </li>
                                     <!-- <li class="menu-item">
                                         <a class="page-scroll" href="#Subscribe">Subscribe</a>
