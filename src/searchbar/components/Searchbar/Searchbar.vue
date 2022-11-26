@@ -21,7 +21,7 @@
         }
       },
       mounted() {
-        const url = "ws://127.0.0.1:8000/"
+        const url = "ws://searchbar-suggestion-api.herokuapp.com/"
         this.connection = new WebSocket(url);
         this.connection.onopen = () => console.log("connection established");
         this.connection.onmessage = this.receiveText;
