@@ -11,12 +11,14 @@ import Platform from "../pages/Platform";
 
 
 const routes = [
-  { path: "/", component: Page404},
+  { path: "/", component: Page404 ,
+  children: [
   { path: '/chatbot', name: 'Chatbot',component: ChatBot},
   { path: "/searchbar", component: SearchBar},
   { path: "/:catchAll(.*)", component: Page404},
   { path: "/customer", component: Customer},
   { path: "/platform", component: Platform},
+  ]},
 
 
 ];
