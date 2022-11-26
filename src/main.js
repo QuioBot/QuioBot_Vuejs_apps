@@ -13,8 +13,6 @@ import "./assets/App.scss";
 
 axios.defaults.baseURL = 'http://127.0.0.1:8000/'
 
-Vue.config.productionTip = false
-
 
 const app = createApp(App).use(router,axios).use(Toaster);
 

@@ -1,5 +1,5 @@
-let publicPath = process.env.NODE_ENV === 'production' ? '/' : '/';
-
 module.exports = {
-  publicPath,
-};
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/QuioBot_Vuejs_apps/'
+    : '/'
+}
