@@ -13,7 +13,7 @@ import "./assets/App.scss";
 
 var VueScrollTo = require('vue-scrollto');
 
-axios.defaults.baseURL = 'http://127.0.0.1:8000/'
+// axios.defaults.baseURL = 'http://127.0.0.1:8000/'
 
 
 const app = createApp(App).use(router,axios).use(Toaster).use(VueScrollTo);
