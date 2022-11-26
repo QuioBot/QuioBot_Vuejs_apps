@@ -1,4 +1,4 @@
-import { createWebHistory, createRouter } from "vue-router";
+import { createWebHashHistory, createRouter } from "vue-router";
 
 // import Home01 from "../pages/Home01";
 import Page404 from "../pages/404";
@@ -22,8 +22,8 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
-  linkExactActiveClass: "active",
+  history: createWebHashHistory(),
+  // linkExactActiveClass: "active",
   routes,
   scrollBehavior() {
     return { top: 0 };
