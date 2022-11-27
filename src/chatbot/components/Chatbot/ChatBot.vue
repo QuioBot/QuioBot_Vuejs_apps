@@ -197,7 +197,7 @@ mounted:function(){
       //       // console.log(response.data.user)
       //         })
 
-      axios.get(`http://127.0.0.1:8008/chatbot?question=${message}`)
+      axios.get(`http://35.203.172.85/chatbot?question=${message}`)
       .then(res => {
         this.messages.push({
           text: res.data,
