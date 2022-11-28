@@ -10,7 +10,7 @@
                         <!-- <h2 style="color:#B4E116 ;" class="title">{{title3}}</h2> -->
                         <p class="desc">{{desc}}</p>
                         <div class="button">
-                            <a class="btn-action style-searchbar" href="/home-defi-01"><span class="effect">Github Repository</span></a>
+                            <a :href="github" target="_blank" class="btn-action"><span>Github Repository</span></a> 
                         </div>
                     </div>
                 </div>
@@ -49,6 +49,7 @@ export default {
     },
     data (){
         return {
+            github : "https://github.com/QuioBot?tab=repositories",
             dataBanner,
             title1 : 'QUIBOT Deep Learning',
             title2 : 'Medical SearchBar Suggestion',

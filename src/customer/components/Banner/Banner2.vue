@@ -10,7 +10,7 @@
                         <h2 class="title"><span>{{title2}}</span>{{title3}} </h2>
                         <p class="desc">{{desc}}</p>
                         <div class="button">
-                            <a class="btn-action style-customer" href="/sign-in"><span class="effect">Github Repository</span></a>
+                            <a :href="github" target="_blank" class="btn-action"><span>Github Repository</span></a>  
                         </div>
 <!-- 
                         <ul class="content-list">
@@ -84,6 +84,7 @@ export default {
     },
     data (){
         return {
+            github : "https://github.com/QuioBot?tab=repositories",
             score_sentiment : "positive",
             score_confidence : 0.7765687227249146,
             // dataBanner,

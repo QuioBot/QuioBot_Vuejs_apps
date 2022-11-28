@@ -17,7 +17,7 @@
                                 {{title2}}
                             </h2>
                             <p class="fs-20">{{subtitle2}}</p>
-                            <a href="#" class="btn-action style-6"><span>Login Now</span></a>
+                            <a :href="app" target="_blank" class="btn-action style-6"><span>Login Now</span></a>
                             <carousel
                                 :autoplay="5000"
                                 :wrap-around="true"
@@ -58,6 +58,7 @@ export default defineComponent({
     },
     data (){
         return {
+            app : "http://app.omarelghiba.com/#/login",
             dataBanner,
             title : 'QUIOBOT DIGITAL MARKETING PLATFORM',
             title2 : 'WHAT IS QUIOBOT DIGITAL MARKETING PLATFORM ? ',

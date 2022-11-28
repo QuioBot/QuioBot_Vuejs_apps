@@ -138,7 +138,7 @@ export const dataTeam = [
         id: 5,
         img: img5,
         name: 'Omar El Ghiba',
-        position: 'Data Scientist And Devops Developer (MLOPS)',
+        position: ' Data scientist (MLOPS) & Full Stack Web Developer & Devops Developer',
         listsocial: [
             {
                 id: 1,
@@ -166,7 +166,7 @@ export const dataTeam = [
         id: 6,
         img: img6,
         name: 'Omar El Ghiba',
-        position: 'Data Scientist And Devops Developer',
+        position: ' Data scientist (MLOPS) & Full Stack Web Developer & Devops Developer',
         listsocial: [
             {
                 id: 1,

@@ -7,7 +7,7 @@
                     <div class="block-text">
                         <h2 class="title">{{title}}</h2>
                         <p class="text fs-20">{{desc}}</p>
-                        <a href="#" class="btn-action"><span>Github Repository</span></a>
+                        <a :href="github" target="_blank" class="btn-action"><span>Github Repository</span></a>
                     </div>
                 </div>
                 <div class="col-xl-7 col-md-12">
@@ -65,6 +65,7 @@ export default defineComponent ({
         Slide,
     },
     data: () => ({
+        github : "https://github.com/QuioBot?tab=repositories",
         dataAbout,
         title: 'Thank you for checking this one out',
         desc : 'Code linked below !',

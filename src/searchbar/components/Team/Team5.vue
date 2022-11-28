@@ -44,8 +44,10 @@ export default {
         return {
             dataTeam,
             subtitle: '',
-            title: 'Our Team',
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget quam est, elit venenatis nulla. Sodales netus viverra ipsum consequat.',
+            title: 'About Me',
+            desc: `I'm a Data scientist (MLOPS) & Full Stack Web Developer & Devops Developer focused on
+        creating Web Ai Solution End to End Project, I am passionate about building excellent Website that use Machine learning and Deep Learning , Vuejs in Frontend ,
+        Djando ,Fastapi , Php in Backend ,Postgres and Mongodb for Sql and NoSql Databases, Github Action for CI/CD and Kubernetes, Docker, Docker Compose for Deployment.`,
         }    
     }
 };

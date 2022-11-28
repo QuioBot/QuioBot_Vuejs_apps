@@ -36,7 +36,7 @@
                                         <a class="page-scroll" href="#" v-scroll-to="'#Technologies'">Technologies</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a class="page-scroll" href="#" v-scroll-to="'#team'">Team</a>
+                                        <a class="page-scroll" href="#" v-scroll-to="'#team'">About Me</a>
                                     </li>
                                    
                                     <li class="menu-item">

@@ -79,7 +79,7 @@ export default {
                 message: ''
               },
             title: 'Contact Us',
-            desc : 'We are always open and we welcome and questions you have for our team. If you wish to get in touch, please fill out the form below. Someone from our team will get back to you shortly',
+            desc : 'If you’d like to know more about my work or process feel free to get in touch. ',
             mail: 'Contact@quiobot.com',
             phone : '+212 697856535',
             author : 'QuioBot',
