@@ -9,7 +9,7 @@
                         <h6  style="font-size: 4em; color:#42ccce;" class="sub-title">{{subtitle}}</h6>
                         <h2 style="font-size: 5em;" className="title">{{title}}</h2>
                         <p className="desc">{{desc}}</p>
-                        <a :href="github" target="_blank" class="btn-action"><span>Github Repository</span></a> 
+                        <a :href="github" target="_blank" class="btn-action style-5"><span>Github Repository</span></a> 
                     </div>
                 </div>
                 <div className="col-xl-6 col-md-12">
@@ -83,7 +83,7 @@ export default {
     },
     data (){
         return {
-            github : "https://github.com/QuioBot?tab=repositories",
+            github : "https://github.com/omar-elghiba/QuiBot-ChatBot",
             dataBanner,
             subtitle : 'BERT And GPT',
             title : 'Quiobot Chat Bot',

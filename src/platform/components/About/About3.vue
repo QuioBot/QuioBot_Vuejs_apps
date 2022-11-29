@@ -65,7 +65,7 @@ export default defineComponent ({
         Slide,
     },
     data: () => ({
-        github : "https://github.com/QuioBot?tab=repositories",
+        github : "https://github.com/omar-elghiba/Quibot-Digital-Marketing",
         dataAbout,
         title: 'Thank you for checking this one out',
         desc : 'Code linked below !',

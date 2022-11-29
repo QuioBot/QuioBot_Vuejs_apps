@@ -49,7 +49,7 @@ export default {
     },
     data (){
         return {
-            github : "https://github.com/QuioBot?tab=repositories",
+            github : "https://github.com/omar-elghiba/QuioBot-SearchBar-Suggestion",
             dataBanner,
             title1 : 'QUIBOT Deep Learning',
             title2 : 'Medical SearchBar Suggestion',

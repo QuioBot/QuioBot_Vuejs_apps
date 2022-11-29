@@ -84,7 +84,7 @@ export default {
     },
     data (){
         return {
-            github : "https://github.com/QuioBot?tab=repositories",
+            github : "https://github.com/omar-elghiba/QuiBot-Customer-Satisfaction",
             score_sentiment : "positive",
             score_confidence : 0.7765687227249146,
             // dataBanner,

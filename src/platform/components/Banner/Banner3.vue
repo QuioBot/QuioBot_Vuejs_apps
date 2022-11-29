@@ -58,7 +58,7 @@ export default defineComponent({
     },
     data (){
         return {
-            app : "http://app.omarelghiba.com/#/login",
+            app : "http://157.245.17.232/#/email_marketing",
             dataBanner,
             title : 'QUIOBOT DIGITAL MARKETING PLATFORM',
             title2 : 'WHAT IS QUIOBOT DIGITAL MARKETING PLATFORM ? ',
